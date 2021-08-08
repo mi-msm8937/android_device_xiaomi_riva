@@ -1,0 +1,3 @@
+# IR
+on boot
+    chown system system /dev/spidev7.1
