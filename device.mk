@@ -4,6 +4,12 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Gatekeeper
+TARGET_USES_DEVICE_SPECIFIC_GATEKEEPER := true
+
+# Keymaster
+TARGET_USES_DEVICE_SPECIFIC_KEYMASTER := true
+
 # Inherit from rova-common
 $(call inherit-product, device/xiaomi/rova-common/rova.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
@@ -15,6 +21,14 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/mixer_paths_qrd_sku2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_qrd_sku2.xml
+
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-service.software
+
+# Keymaster HAL
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.1-service
 
 # Rootdir
 PRODUCT_PACKAGES += \
