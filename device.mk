@@ -7,6 +7,7 @@
 # Inherit from rova-common
 $(call inherit-product, device/xiaomi/rova-common/rova.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
+$(call inherit-product, build/make/target/product/go_defaults_512.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
