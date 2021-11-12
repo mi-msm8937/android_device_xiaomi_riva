@@ -28,5 +28,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# Wi-Fi
+PRODUCT_COPY_FILES += \
+    vendor/xiaomi/tiare/proprietary/vendor/bin/wcnss_service_olive:$(TARGET_COPY_OUT_VENDOR)/bin/wcnss_service_olive
+
 # Inherit from vendor blobs
 $(call inherit-product, vendor/xiaomi/riva/riva-vendor.mk)
