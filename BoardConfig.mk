@@ -9,6 +9,9 @@ include device/xiaomi/rova-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/xiaomi/riva
 
+# Boot animation
+TARGET_BOOTANIMATION_HALF_RES := true
+
 # Kernel
 TARGET_KERNEL_CONFIG := riva_defconfig
 
