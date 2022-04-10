@@ -13,7 +13,7 @@ DEVICE_PATH := device/xiaomi/riva
 TARGET_BOOTANIMATION_HALF_RES := true
 
 # Kernel
-BOARD_KERNEL_CMDLINE += mem=1024M
+BOARD_KERNEL_CMDLINE += mem=1024M prlmk.kill_heaviest_gid=0
 TARGET_KERNEL_CONFIG := riva_defconfig
 
 # Security patch level
